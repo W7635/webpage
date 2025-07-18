@@ -1,0 +1,73 @@
+a:hover{
+	cursor: pointer;
+}
+.header{
+	position: relative;
+	top:30px;
+	left:80px;
+}
+.header img{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 100px;
+	overflow: hidden;
+	border-radius: 5px;
+}
+.h2_special{
+	width: 80px;
+	position: absolute;
+	top: 18px;
+	left: 210px;
+	color: orangered;
+}
+input[type="search"]{
+	width: 370px;
+	height: 50px;
+	border:gainsboro 2px solid;
+	border-radius: 5px;
+	position: absolute;
+	top: 40px;
+	left:600px;
+}
+.button1{
+	text-align: center;
+	height: 40px;
+	width: 70px;
+	color: white;
+	background-color: orangered;
+	cursor: pointer;
+	border:0px;
+	border-radius: 5px;
+	font-size: 18px;
+	position: absolute;
+	top: 45px;
+	left:890px;
+}
+.button1:hover{
+	cursor: pointer;
+}
+table{
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}
+
+.tr1{
+	background-color: gainsboro;
+	border-radius: 5px;
+}
+.td1{
+	color: orangered;
+}
+.label1{
+	color: orangered;
+}
+#quantity{
+	width: 50px;
+	text-align: center;
+}
+.btn_white_bc{
+	background-color: ghostwhite;
+	border-radius: 5px;
+}
