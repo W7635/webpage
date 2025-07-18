@@ -1,3 +1,2 @@
-	网页采用MVC模式，上传至github时候删除了代码中连接的mysql数据库地址、用户名和密码，如果想要正常使用，需先连接本地数据库。需要连接数据库的地方包括：java/DBUtil.java、webapp/add.jsp、addToCart.jsp、buyNow.jsp、checkout.jsp、delete.jsp、deleteProduct.jsp、index.jsp、modify.jsp、search.jsp、update.jsp、updateQuantity.jsp、购物车.jsp、我的订单.jsp。
-	另外，“首页”是未登录的首页，“首页1”是管理员登录后的首页，“首页2”是普通会员登录的首页
+	网页采用MVC模式，上传至github时候删除了代码中连接的mysql数据库地址、用户名和密码，如果想要正常使用，需先连接本地数据库。需要连接数据库的地方包括：java/DBUtil.java、webapp/add.jsp、addToCart.jsp、buyNow.jsp、checkout.jsp、delete.jsp、deleteProduct.jsp、index.jsp、modify.jsp、search.jsp、update.jsp、updateQuantity.jsp、购物车.jsp、我的订单.jsp。另外，“首页”是未登录的首页，“首页1”是管理员登录后的首页，“首页2”是普通会员登录的首页
 ps：并非全部完善的网页，只是根据实训要求重点制作了主要页面以及功能。登录和注册界面并未编写数据库连接代码，如果需要的话，仿照首页里的连接代码即可。
