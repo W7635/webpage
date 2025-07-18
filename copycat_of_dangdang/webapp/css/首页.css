@@ -1,0 +1,393 @@
+.img-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    height: 230px;          /* 容器高度 */
+}
+
+img {
+    max-width: 100%; /* 防止图片溢出 */
+    height: auto;     /* 保持宽高比 */
+}
+
+.top-bar {
+    width: 100%;
+    height: 20px;
+    font-weight: bold;
+    background-color: ghostwhite;
+    margin-top: 1px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    position: relative; /* 关键：建立定位上下文 */
+}
+
+.label_diqu{
+    position: absolute;
+    left: 5%;
+    line-height: 20px;
+}
+
+.select_diqu {
+    position: absolute;
+    left: 10%;
+    top:2px;
+    line-height: 20px;
+    padding: 0 10px;
+    background-color: ghostwhite; /* 保持背景一致 */
+    border: 0px ;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 可选阴影 */
+    z-index: 1; /* 确保在上层 */
+}
+
+.a_denglu{
+    color: orangered;
+    text-decoration: none;
+}
+
+.label_denglu{
+    position: absolute;
+    left: 45%;
+}
+
+.a_gouwuche{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 83%;
+
+}
+.a_gouwuche:hover{
+    color: orangered;
+}
+
+.a_wodedingdan{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 90%;
+}
+.a_wodedingdan:hover{
+    color: orangered;
+}
+
+.search_input {
+    position: absolute;
+    top: 49%;
+    left: 35%;
+    width: 43%;
+    height: 35px;
+    border: orangered 3px solid;
+}
+.search_btn {
+    position: absolute;
+    top: 49%;
+    left: 79%;
+    height: 40px;
+    border:0px;
+    background-color:orangered;
+    color: white;
+}
+
+.label_fenlei{
+    position: absolute;
+    top: 67%;
+    left: 5%;
+    background-color: orangered;
+    color: white;
+    font-size:18px;
+    text-align:center;
+    width: 180px;
+    height: 30px;
+}
+
+.orange-line{
+    border: 2px solid orangered;
+    width: 100%;
+    position: absolute;
+    top:70%
+}
+
+/* 主容器 */
+.category-container {
+    position:  absolute;
+    left: 5%;
+    top: 73%;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-height: 500px;
+}
+
+/* 左侧主分类 */
+.left-panel {
+    width: 200px;
+    border-right: 1px solid #eee;
+    padding: 15px 0;
+    position: relative; /* 关键：为右侧面板提供定位参考 */
+}
+
+.main-category {
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.main-category:hover::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #ff6b81;
+    z-index: 2; /* 确保线条显示在右侧面板上方 */
+}
+
+.main-category:hover {
+    color: #ff6b81;
+    background-color: #fff9f9;
+}
+
+/* 右侧详细分类 */
+.right-panel {
+    position: absolute;
+    left: 200px;
+    top: 0;
+    width: 1000px;
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+    border-left: 1px solid #eee;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+    display: none;
+    z-index: 1; /* 确保在左侧面板上方 */
+}
+
+/* 悬停时显示对应的右侧面板 */
+.category-item:hover .right-panel {
+    display: block;
+}
+
+/* 详细分类样式 */
+.subcategory-group {
+    margin-bottom: 25px;
+}
+
+.subcategory-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.subcategory-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.subcategory-item {
+    padding: 6px 12px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #666;
+}
+
+.subcategory-item:hover {
+    background-color: #ff6b81;
+    color: white;
+}
+
+/*图片轮播器*/
+.slider {
+    position: absolute;
+    top: 72%;
+    left: 21%;
+    width: 65%;
+    height: 330px;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.nav {
+    position: absolute;
+    bottom: -27%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    margin: 0 5px;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.current {
+    background-color: #ff0000;
+    color: white;
+}
+
+.ad-container {
+    position: absolute;
+    top: 74%;
+    left:86%;
+    width: 14%;
+    height: 300px;
+}
+
+.ad-container img {
+    width: 100%;
+    height: auto;
+}
+
+.公告栏 {
+    position: absolute;
+    top: 103%;
+    left: 87%;
+    border: 1px solid #ccc;
+    font-size: 10px;
+}
+
+.选项卡 {
+    display: flex;
+    background-color: #f0f0f0;
+    font-size: 10px;
+}
+
+.选项卡项.active {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.选项卡项 {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.信息内容{
+    padding: 5px;
+    text-align: left;
+    font-size: 12px;
+}
+.服务内容 {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.img-container_2{
+    position: absolute;
+    top: 132%;
+    left: 21%;
+}
+
+.img-container_3{
+    position: absolute;
+    top: 138%;
+    left: 87%;
+}
+
+.label_tuijian{
+    position: absolute;
+    top: 173%;
+    left: 5%;
+    background-color: orangered;
+    color: white;
+    font-size:18px;
+    text-align:center;
+    width: 180px;
+    height: 30px;
+}
+
+.orange-line_tuijian{
+    border: 2px solid orangered;
+    width: 100%;
+    position: absolute;
+    top:176%
+}
+
+.pagination-container {
+    position: absolute;
+    top: 180%;
+    left: 10%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.page {
+    display: none;
+}
+
+.page:first-child {
+    display: block;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.item {
+    width: 23%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-size: 16px;
+    color: red;
+}
+
+.pagination-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination-controls button {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.pagination-controls button:hover {
+    background-color: #e0e0e0;
+}

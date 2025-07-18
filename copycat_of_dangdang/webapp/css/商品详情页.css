@@ -1,0 +1,219 @@
+.top-bar {
+    width: 100%;
+    height: 20px;
+    font-weight: bold;
+    background-color: ghostwhite;
+    margin-top: 1px;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+    position: relative; /* 关键：建立定位上下文 */
+}
+
+.label_diqu{
+    position: absolute;
+    left: 5%;
+    line-height: 20px;
+}
+
+.select_diqu {
+    position: absolute;
+    left: 10%;
+    top:2px;
+    line-height: 20px;
+    padding: 0 10px;
+    background-color: ghostwhite; /* 保持背景一致 */
+    border: 0px ;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 可选阴影 */
+    z-index: 1; /* 确保在上层 */
+}
+
+.a_denglu{
+    color: orangered;
+    text-decoration: none;
+}
+
+.label_denglu{
+    position: absolute;
+    left: 60%;
+}
+
+.a_gouwuche{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 83%;
+
+}
+.a_gouwuche:hover{
+    color: orangered;
+}
+
+.a_wodedingdan{
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 90%;
+}
+.a_wodedingdan:hover{
+    color: orangered;
+}
+
+.search_input {
+    position: absolute;
+    top: 55px;
+    left: 35%;
+    width: 43%;
+    height: 35px;
+    border: orangered 3px solid;
+}
+.search_btn {
+    position: absolute;
+    top: 56px;
+    left: 80%;
+    height: 40px;
+    border:0px;
+    background-color:orangered;
+    color: white;
+}
+
+.orange-line{
+    border: 2px solid orangered;
+    width: 100%;
+    position: absolute;
+    top:120px;
+}
+
+.img-container {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    height: 230px;          /* 容器高度 */
+}
+
+img {
+    max-width: 100%; /* 防止图片溢出 */
+    height: auto;     /* 保持宽高比 */
+}
+
+.container {
+    position: absolute;
+    top: 160px;
+    left: 30px;
+    width: 400px;
+    margin: 50px auto;
+}
+
+#main-image {
+    width: 100%;
+}
+
+.small-images {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.small-img {
+    width: 80px;
+    cursor: pointer;
+}
+
+.name{
+    position: absolute;
+    top:220px;
+    left: 500px;
+    text-align: left;
+}
+.name_hr{
+    position: absolute;
+    top:90px;
+    color:whitesmoke;
+    border: 2px solid;
+    width: 760px;
+}
+
+.price{
+    position: absolute;
+    top:370px ;
+    left: 500px;
+    width: 770px;
+    height: 150px;
+    background-color: #f8f2f2;
+    text-align: left;
+}
+
+.cuxiao{
+    position: absolute;
+    top:520px ;
+    left: 500px;
+    text-align: left;
+}
+.cuxiao_hr{
+    position: absolute;
+    top: 45px;
+    color:whitesmoke;
+    border: 2px solid;
+    width: 760px;
+}
+
+.shopping-buttons-container {
+    position: absolute;
+    top: 650px;
+    left: 500px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.quantity-input {
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.quantity-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+.plus-btn {
+    border-left: 1px solid #ccc;
+}
+
+.minus-btn {
+    border-right: 1px solid #ccc;
+}
+
+.add-to-cart-btn {
+    padding: 8px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buy-now-btn {
+    padding: 8px 20px;
+    background-color: white;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
