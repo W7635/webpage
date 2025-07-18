@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>增加会员</title>
+    <style>
+    	table {border:1px solid;}
+    	td {border:1px solid;}
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+	<form action="add.jsp" method="post">
+	<table>
+		<tr>
+			<td colspan="4" align="center"><h1>增加会员</h1></td>
+		</tr>
+		<tr>
+			<td><label for="phone">电话:</label></td>
+			<td colspan="3"><input type="text" id="phone" name="phone" required></td>
+		</tr>
+		<tr>
+			<td><label for="password">密码:</label></td>
+			<td colspan="3"><input type="text" id="phone" name="password" required></td>
+		</tr>
+		<tr>
+			<td><label for="status">状态:</label></td>
+			<td colspan="3">
+				<input type="radio" name="status" value="1"> 激活
+				<input type="radio" name="status" value="0"> 禁用
+			</td>
+		</tr>
+		<tr>
+			<td> <label for="user_type">会员类别:</label></td>
+			<td colspan="3">
+				<select id="user_type" name="user_type" required>
+            		<option value="">请选择</option>
+            		<option value="1">管理员</option>
+            		<option value="2">普通会员</option>
+        		</select>
+        	</td>
+		</tr>
+		<tr>
+			<td colspan="4" align="center">
+				<button type="submit">保存</button>
+				<button type="reset">重置</button>
+			</td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>
+
+
+
